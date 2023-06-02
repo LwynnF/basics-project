@@ -16,16 +16,14 @@
 			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 			crossorigin="anonymous"
 		/>
+		<link rel="shortcut icon" href="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/084/137/original/matcha-tea_%281%29.png?1685712033" type="image/x-icon">
 		<title>Matcha</title>
 		<style>
 			body {
 				font-family: "TAN - Pearl";
 				background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/084/054/original/matcha-bg_%281%29.png?1685653301);
 				color: #d0ccb3;
-				background-size: contain;
-				background-repeat: repeat-y;
-				
-		
+				background-size: cover;
 			}
 
 			h1 {
@@ -35,7 +33,11 @@
 			p {
 				line-height: 2;
 			}
-			
+
+			.overlay-text a {
+				text-decoration: none;
+				color: #54725e;
+			}
 
 			.matcha {
 				margin-top: 50px;
@@ -56,10 +58,50 @@
 				background-color: #d0ccb3;
 				color: #54725e;
 			}
+
+		.image-container {
+	position: relative;
+	display: inline-block;
+}
+
+.image-container:hover .overlay {
+	bottom: 0;
+	height: 100%;
+	opacity: 1;
+}
+
+.overlay {
+	background-color: #d0ccb3;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	transition: all 0.4s ease-in-out;
+}
+
+.overlay-text {
+	position: absolute;
+	padding: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	white-space: nowrap;
+	color: #54725e;
+	font-size: 24px;
+}
+
+
+
+
+
+
+
 		</style>
 	</head>
 	<body>
-		
 		<div class="container">
 			<div class="row">
 				<!-- Image -->
@@ -89,30 +131,67 @@
 			</div>
 		</div>
 
-		<h2 class="mt-5 pt-5 text-center" id="learn-more">You Will Need</h2>
+		<h2 class="mt-5 pt-5 text-center mb-5" id="learn-more">You Will Need</h2>
 		<div class="container">
 			<div class="row d-flex justify-content-evenly">
 				
-				<div class="col-4">
-					<img 
-					class="img-fluid mt-5"
-					src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/084/076/original/matcha-bowl.jpg?1685659650" alt="Matcha Bowl">
-				</div>
+				<div class="col-sm-4">
+					<div class="image-container">
+						<img
+							class="img-fluid hover-img"
+							src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/084/076/original/matcha-bowl.jpg?1685659650"
+							alt="Matcha Bowl"
+						/>
+						<div class="overlay">
+							<div class="overlay-text">
+								<a
+									href="https://imperialteas.co.uk/tea-equipment/japanese-matcha-tea-equipment/bowls/"
+									target="_blank"
+									>Matcha Bowl</a
+								>
+							</div>
+						</div>
+					</div>
+					</div>
 
-				<div class="col-4">
-					<img 
-					class="img-fluid mt-5"
-					src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/084/067/original/sift.jpeg?1685657957" alt="Sift">
-				</div>
+		<div class="col-sm-4">
+					<div class="image-container">
+						<img
+							class="img-fluid hover-img"
+							src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/084/067/original/sift.jpeg?1685657957"
+							alt="Matcha Sift"
+						/>
+						<div class="overlay">
+							<div class="overlay-text">
+								<a
+									href="https://teapro.co.uk/product/matcha-sieve-and-tea-strainer/"
+									target="_blank"
+									>Sift & <span><a href="https://imperialteas.co.uk/matcha-tea-scoop-momoka-89170">Spoon</a></span></a
+								>
+							</div>
+						</div>
+					</div>
+					</div>
 
-		<div class="col-4">
-					<img 
-					class="img-fluid mt-5"
-					src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/084/070/original/whisk.jpeg?1685658369" alt="Bamboo Whisk">
-				</div>
-
-				</div>
-
+									<div class="col-sm-4">
+					<div class="image-container">
+						<img
+							class="img-fluid hover-img"
+							src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/084/135/original/whisk.jpeg?1685710527"
+							alt="Bamboo Whisk"
+						/>
+						<div class="overlay">
+							<div class="overlay-text">
+								<a
+									href="https://imperialteas.co.uk/bamboo-japanese-matcha-tea-whisk-67779"
+									target="_blank"
+									>Bamboo Whisk</a
+								>
+							</div>
+						</div>
+					</div>
+					</div>
+</div>
 				<h2 class="mt-5 pt-5 text-center">Matcha Preparation</h2>
 				<div class="row">
 							<div class="col-4">
@@ -133,13 +212,15 @@
 			</div>
 		</div>
 
-		<div class="footer">
-			<p>coded by</p>
+		<hr> 
+		<div class="footer text-center">
+			<p>Coded by</p>
 		</div>
 
 	</body>
 	<script>
-		let matcha = prompt("Hey, do you like matcha?");
-		alert(`Hey ${name}, let's learn about matcha together!)
+		// let matcha = prompt("Hey there, do you like matcha?");
+		// alert(`Hey ${name}, let's learn about matcha together!`);
 	</script>
+
 </html>

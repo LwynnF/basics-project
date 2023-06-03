@@ -17,13 +17,18 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="shortcut icon" href="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/084/137/original/matcha-tea_%281%29.png?1685712033" type="image/x-icon">
+				<script
+			src="https://kit.fontawesome.com/ddc3ee268a.js"
+			crossorigin="anonymous"
+		></script>
 		<title>Matcha</title>
 		<style>
 			body {
 				font-family: "TAN - Pearl";
-				background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/084/054/original/matcha-bg_%281%29.png?1685653301);
+				background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/084/215/original/matcha-bg_%281920_%C3%97_2160px%29_%283840_%C3%97_2160px%29_%283%29.png?1685789699);
 				color: #d0ccb3;
-				background-size: cover;
+				background-size:cover;
+				
 			}
 
 			h1 {
@@ -34,10 +39,6 @@
 				line-height: 2;
 			}
 
-			.overlay-text a {
-				text-decoration: none;
-				color: #54725e;
-			}
 
 			.matcha {
 				margin-top: 50px;
@@ -52,6 +53,7 @@
 				color: #d0ccb3;
 				position: relative;
 				left: 40%;
+			
 			}
 
 			.btn:hover {
@@ -62,6 +64,7 @@
 		.image-container {
 	position: relative;
 	display: inline-block;
+	box-shadow: 0px 5px 5px 0 #63816d;
 }
 
 .image-container:hover .overlay {
@@ -71,7 +74,7 @@
 }
 
 .overlay {
-	background-color: #d0ccb3;
+	background: linear-gradient(180deg, #fdfcfb 0%, #e2d1c3 100%);
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -93,12 +96,32 @@
 	font-size: 24px;
 }
 
+			.overlay-text a {
+				text-decoration: none;
+				color: #54725e;
+			}
 
 
+			footer .social-links a {
+	margin: 0 20px;
+	color: #63816d;
+	background: #d0ccb3;
+	padding: 5px 10px;
+	font-size: 18px;
+	border-radius: 50%;
+	transition: all 100ms ease-in-out;
+}
+
+footer .social-links a:hover {
+	transform: scale(1.25);
+}
 
 
-
-
+.designed-by{
+	font-weight:300;
+	font-size: 12px;
+	color: #d0ccb3;
+}
 		</style>
 	</head>
 	<body>
@@ -121,11 +144,7 @@
 							finely ground powder of specially grown and processed green tea
 							leaves, traditionally consumed in East Asia.
 						</p>
-						<a
-							class="btn"
-							href="#learn-more"
-							>Learn more</a
-						>
+						<button class="btn">Learn More</button>
 					</div>
 				</div>
 			</div>
@@ -193,7 +212,7 @@
 					</div>
 </div>
 				<h2 class="mt-5 pt-5 text-center">Matcha Preparation</h2>
-				<div class="row">
+				<div class="row mb-3">
 							<div class="col-4">
 					<h4 class="mt-5"><strong>Step 1: Sift </strong></h3>
 					<p>By sifting the matcha, this will break up any clumps and allow for it to mix easily.</p>
@@ -212,15 +231,52 @@
 			</div>
 		</div>
 
-		<hr> 
-		<div class="footer text-center">
-			<p>Coded by</p>
-		</div>
+	<!-- Footer -->
+	
+		<hr>
+		<footer class="text-center ">
+
+			<div class="social-links d-flex justify-content-center pt-3">
+				<a
+					href="https://www.github.com/LwynnF"
+					title="Github Profile"
+					><i class="fab fa-github"></i
+				></a>
+				<a
+					href="https://www.linkedin.com/in/louise-fong"
+					title="LinkedIn Profile"
+					><i class="fab fa-linkedin"></i
+				></a>
+				<a
+					href="https://www.instagram.com/wynn.codes"
+					title="Instagram Profile"
+					><i class="fab fa-instagram"></i
+				></a>
+			</div>
+			<h4 class="text-center mt-3 designed-by mt-1 pb-3">
+				<br>
+				Designed and coded by Louise Fong, open-sourced on Github.
+			</h4>
+		</footer> 
 
 	</body>
 	<script>
-		// let matcha = prompt("Hey there, do you like matcha?");
-		// alert(`Hey ${name}, let's learn about matcha together!`);
+
+		let name = prompt("Hey there, what's your name?");
+		let matcha = prompt("Do you like matcha?");
+		if (matcha === "Yes" || matcha === "yes") {
+			alert(`Hi ${name}!, check out this matcha website!`); 
+		} else {
+			alert(`Hi ${name}!, maybe this will website will change your mind?`); 
+		}
+
+		function learnMore(){
+			window.location.href = "#learn-more";
+		}
+
+		let learnButton = document.querySelector("button");
+			learnButton.addEventListener("click", learnMore);
+	
 	</script>
 
 </html>
